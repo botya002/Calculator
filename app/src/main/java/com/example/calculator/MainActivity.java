@@ -158,8 +158,10 @@ public class MainActivity extends AppCompatActivity {
                 tvResult.setText(firstValue + "*");
                 break;
 
-            case R.id.btn_rovno:
+            case R.id.btn_rovno:secondValue=Integer.parseInt(tvResult.getText().toString().replace(firstValue + operation,""));
                 secondValue = Integer.parseInt(tvResult.getText().toString().replace(firstValue + operation, ""));
+                btnResult.setVisibility(View.VISIBLE);
+                isResultSuccess = true;
                 switch (operation) {
                     case "+":
                         tvResult.setText(firstValue + operation + secondValue + "\n" + (firstValue + secondValue));
