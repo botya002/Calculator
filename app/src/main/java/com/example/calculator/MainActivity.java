@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         if (isResultSuccess) {
             tvResult.setText("0");
             isResultSuccess = false;
-            btnResult.setVisibility(View.GONE);
         }
         switch (view.getId()) {
 
@@ -160,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.btn_rovno:secondValue=Integer.parseInt(tvResult.getText().toString().replace(firstValue + operation,""));
                 secondValue = Integer.parseInt(tvResult.getText().toString().replace(firstValue + operation, ""));
-                btnResult.setVisibility(View.VISIBLE);
                 isResultSuccess = true;
                 switch (operation) {
                     case "+":
